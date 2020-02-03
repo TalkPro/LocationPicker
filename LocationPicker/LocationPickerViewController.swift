@@ -16,33 +16,33 @@ open class LocationPickerViewController: UIViewController {
 		let action: (CLLocation) -> ()
 	}
 	
-	public var completion: ((Location?) -> ())?
+	@objc public var completion: ((Location?) -> ())?
 	
 	// region distance to be used for creation region when user selects place from search results
-	public var resultRegionDistance: CLLocationDistance = 600
+	@objc public var resultRegionDistance: CLLocationDistance = 600
 	
 	/// default: true
-	public var showCurrentLocationButton = true
+	@objc public var showCurrentLocationButton = true
 	
 	/// default: true
-	public var showCurrentLocationInitially = true
+	@objc public var showCurrentLocationInitially = true
 
     /// default: false
     /// Select current location only if `location` property is nil.
-    public var selectCurrentLocationInitially = false
+    @objc public var selectCurrentLocationInitially = false
 	
 	/// see `region` property of `MKLocalSearchRequest`
 	/// default: false
-	public var useCurrentLocationAsHint = false
+	@objc public var useCurrentLocationAsHint = false
 	
 	/// default: "Search or enter an address"
-	public var searchBarPlaceholder = "Search or enter an address"
+	@objc public var searchBarPlaceholder = "Search or enter an address"
 	
 	/// default: "Search History"
-	public var searchHistoryLabel = "Search History"
+	@objc public var searchHistoryLabel = "Search History"
     
     /// default: "Select"
-    public var selectButtonTitle = "Select"
+    @objc public var selectButtonTitle = "Select"
 	
 	public lazy var currentLocationButtonBackground: UIColor = {
 		if let navigationBar = self.navigationController?.navigationBar,
